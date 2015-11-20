@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XJHistoryViewController">
+            <connections>
+                <outlet property="allButton" destination="0yo-kr-cy3" id="f7m-Lp-ysc"/>
+                <outlet property="monthButton" destination="QFE-h9-bR7" id="j8L-hQ-f7x"/>
+                <outlet property="navigationBar" destination="14" id="DEI-EW-Tv4"/>
+                <outlet property="pullTableView" destination="8" id="CQL-0m-wNZ"/>
+                <outlet property="timeBar" destination="sea-vH-Gdg" id="RbG-sx-MYu"/>
+                <outlet property="view" destination="6" id="7"/>
+                <outlet property="weekButton" destination="23" id="AGm-Ww-7mf"/>
+                <outlet property="yearButton" destination="b8r-5q-gcx" id="O7a-ww-kdQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wu2-du-Nwh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="35" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8" customClass="PullTableView">
+                    <rect key="frame" x="0.0" y="119" width="320" height="449"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="CmF-gp-AwL"/>
+                        <outlet property="delegate" destination="-1" id="PXa-8o-MIq"/>
+                        <outlet property="pullDelegate" destination="-1" id="Yms-hT-6uX"/>
+                    </connections>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="q7N-qh-rCW"/>
+                    </constraints>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.94117647058823528" green="0.396078431372549" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="历史纪录" id="15">
+                            <barButtonItem key="leftBarButtonItem" id="17">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="16">
+                                    <rect key="frame" x="16" y="11" width="44" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="menu.png">
+                                        <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="menuButtonClicked:" destination="-1" eventType="touchUpInside" id="27"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history_bar_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="sea-vH-Gdg">
+                    <rect key="frame" x="17" y="74" width="286" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="aEX-15-hFb"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFE-h9-bR7">
+                    <rect key="frame" x="88" y="76" width="71" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="cQo-ld-fu7"/>
+                    </constraints>
+                    <state key="normal" title="月">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="monthButtonClicked:" destination="-1" eventType="touchUpInside" id="C18-1y-xy4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yo-kr-cy3">
+                    <rect key="frame" x="232" y="76" width="71" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="2Cn-1z-fz5"/>
+                    </constraints>
+                    <state key="normal" title="所有的">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="allButtonClicked:" destination="-1" eventType="touchUpInside" id="xKK-nF-2z6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23">
+                    <rect key="frame" x="17" y="76" width="71" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="RyF-ka-1hV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="周" backgroundImage="history_bar_active.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="weekButtonClicked:" destination="-1" eventType="touchUpInside" id="Q1A-T1-myU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.14999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8r-5q-gcx">
+                    <rect key="frame" x="159" y="76" width="71" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="FY8-jP-LT9"/>
+                    </constraints>
+                    <state key="normal" title="年">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="yearButtonClicked:" destination="-1" eventType="touchUpInside" id="brY-sb-hOm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="23" firstAttribute="width" secondItem="sea-vH-Gdg" secondAttribute="width" multiplier="0.25" id="8KJ-v7-Vgh"/>
+                <constraint firstItem="Wu2-du-Nwh" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="97Y-Xw-5X6"/>
+                <constraint firstItem="sea-vH-Gdg" firstAttribute="top" secondItem="14" secondAttribute="bottom" constant="10" id="BYX-z8-gSp"/>
+                <constraint firstItem="14" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="C5j-g0-8Wh"/>
+                <constraint firstItem="23" firstAttribute="top" secondItem="sea-vH-Gdg" secondAttribute="top" constant="2" id="E7k-Fo-Tyy"/>
+                <constraint firstItem="23" firstAttribute="leading" secondItem="sea-vH-Gdg" secondAttribute="leading" id="GYu-LX-4d4"/>
+                <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="IZi-8X-OYX"/>
+                <constraint firstAttribute="trailing" secondItem="sea-vH-Gdg" secondAttribute="trailing" constant="17" id="NE4-ns-eAb"/>
+                <constraint firstItem="0yo-kr-cy3" firstAttribute="trailing" secondItem="sea-vH-Gdg" secondAttribute="trailing" id="QgY-6d-GbQ"/>
+                <constraint firstItem="QFE-h9-bR7" firstAttribute="leading" secondItem="23" secondAttribute="trailing" id="SUU-6G-obU"/>
+                <constraint firstAttribute="bottom" secondItem="Wu2-du-Nwh" secondAttribute="bottom" id="Ssp-Qt-nul"/>
+                <constraint firstItem="8" firstAttribute="top" secondItem="sea-vH-Gdg" secondAttribute="bottom" constant="10" id="TBx-yD-FAU"/>
+                <constraint firstItem="14" firstAttribute="top" secondItem="6" secondAttribute="top" constant="20" id="VNb-m2-EGZ"/>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="b7t-oY-KW6"/>
+                <constraint firstAttribute="trailing" secondItem="14" secondAttribute="trailing" id="bSC-TE-fF3"/>
+                <constraint firstItem="QFE-h9-bR7" firstAttribute="width" secondItem="sea-vH-Gdg" secondAttribute="width" multiplier="0.25" id="ce6-8G-LCE"/>
+                <constraint firstItem="0yo-kr-cy3" firstAttribute="width" secondItem="sea-vH-Gdg" secondAttribute="width" multiplier="0.25" id="eNY-oO-cjY"/>
+                <constraint firstItem="0yo-kr-cy3" firstAttribute="top" secondItem="sea-vH-Gdg" secondAttribute="top" constant="2" id="faT-9p-Jrh"/>
+                <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" id="fcz-oN-7sU"/>
+                <constraint firstItem="sea-vH-Gdg" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="17" id="jWe-f4-y0n"/>
+                <constraint firstItem="14" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6" secondAttribute="top" id="n4K-8t-NJu"/>
+                <constraint firstItem="b8r-5q-gcx" firstAttribute="width" secondItem="sea-vH-Gdg" secondAttribute="width" multiplier="0.25" id="qcI-yH-q2H"/>
+                <constraint firstItem="QFE-h9-bR7" firstAttribute="top" secondItem="sea-vH-Gdg" secondAttribute="top" constant="2" id="sDh-kf-hd1"/>
+                <constraint firstItem="b8r-5q-gcx" firstAttribute="leading" secondItem="QFE-h9-bR7" secondAttribute="trailing" id="sFd-GT-xkh"/>
+                <constraint firstAttribute="trailing" secondItem="Wu2-du-Nwh" secondAttribute="trailing" id="uqb-wI-gQ7"/>
+                <constraint firstItem="b8r-5q-gcx" firstAttribute="top" secondItem="sea-vH-Gdg" secondAttribute="top" constant="2" id="yGC-bq-fNX"/>
+                <constraint firstItem="Wu2-du-Nwh" firstAttribute="top" secondItem="6" secondAttribute="top" id="yik-Uq-zfh"/>
+            </constraints>
+            <point key="canvasLocation" x="380" y="342"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="history_bar_active.png" width="70" height="31"/>
+        <image name="history_bar_bg.png" width="286" height="35"/>
+        <image name="history_bg.png" width="320" height="568"/>
+        <image name="menu.png" width="44" height="44"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

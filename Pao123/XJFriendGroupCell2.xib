@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendGroupCell2Identifier" rowHeight="80" id="KGk-i7-Jjw" customClass="XJFriendGroupCell2">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSN-sL-fUW">
+                        <rect key="frame" x="13" y="14" width="100" height="57"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="sC9-dU-JNE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riA-Qe-Kee">
+                        <rect key="frame" x="262" y="28" width="50" height="28"/>
+                        <color key="backgroundColor" red="1" green="0.54117647058823526" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="ksA-za-smi"/>
+                        </constraints>
+                        <state key="normal" title="拒绝">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZS-Jq-8CE">
+                        <rect key="frame" x="207" y="28" width="50" height="28"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.396078431372549" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="SOF-2B-Rks"/>
+                        </constraints>
+                        <state key="normal" title="批准">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aSN-sL-fUW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="8TO-sX-GP6"/>
+                    <constraint firstItem="kZS-Jq-8CE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="EOa-As-Li4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="kZS-Jq-8CE" secondAttribute="bottom" constant="15" id="FPe-u8-d1k"/>
+                    <constraint firstItem="aSN-sL-fUW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="Jor-Xj-cVl"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="riA-Qe-Kee" secondAttribute="trailing" id="Q4X-24-yUk"/>
+                    <constraint firstItem="riA-Qe-Kee" firstAttribute="leading" secondItem="kZS-Jq-8CE" secondAttribute="trailing" constant="5" id="Z1h-wR-tYB"/>
+                    <constraint firstItem="aSN-sL-fUW" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="cyR-Xo-87f"/>
+                    <constraint firstItem="riA-Qe-Kee" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="20" id="vxZ-ur-xiy"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="riA-Qe-Kee" secondAttribute="bottom" constant="15" id="yOe-Ts-u7Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="accept" destination="kZS-Jq-8CE" id="kKe-bh-xj9"/>
+                <outlet property="decline" destination="riA-Qe-Kee" id="U00-Fo-X37"/>
+                <outlet property="name" destination="aSN-sL-fUW" id="aAW-83-dnw"/>
+            </connections>
+            <point key="canvasLocation" x="209" y="325"/>
+        </tableViewCell>
+    </objects>
+</document>

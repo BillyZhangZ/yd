@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8398323D1B039B2100A3C1DD /* HeartRateDevice.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8398323C1B039B2100A3C1DD /* HeartRateDevice.h */; };
+		8398323F1B039B2100A3C1DD /* HeartRateDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8398323E1B039B2100A3C1DD /* HeartRateDevice.m */; };
+		839832551B039D6600A3C1DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839832541B039D6600A3C1DD /* Foundation.framework */; };
+		839832571B039D6E00A3C1DD /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 839832561B039D6E00A3C1DD /* CoreBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		839832371B039B2100A3C1DD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = include;
+			dstSubfolderSpec = 16;
+			files = (
+				8398323D1B039B2100A3C1DD /* HeartRateDevice.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		832840D91B57D9440038554E /* libHeartRateDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHeartRateDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8398323C1B039B2100A3C1DD /* HeartRateDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartRateDevice.h; sourceTree = "<group>"; };
+		8398323E1B039B2100A3C1DD /* HeartRateDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeartRateDevice.m; sourceTree = "<group>"; };
+		839832531B039CF100A3C1DD /* HeartRateService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartRateService.h; sourceTree = "<group>"; };
+		839832541B039D6600A3C1DD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		839832561B039D6E00A3C1DD /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		839832361B039B2100A3C1DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				839832571B039D6E00A3C1DD /* CoreBluetooth.framework in Frameworks */,
+				839832551B039D6600A3C1DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8334745F1B04355E0016B367 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+		839832301B039B2100A3C1DD = {
+			isa = PBXGroup;
+			children = (
+				8334745F1B04355E0016B367 /* lib */,
+				839832561B039D6E00A3C1DD /* CoreBluetooth.framework */,
+				839832541B039D6600A3C1DD /* Foundation.framework */,
+				8398323B1B039B2100A3C1DD /* HeartRateDevice */,
+				832840D91B57D9440038554E /* libHeartRateDevice.a */,
+			);
+			sourceTree = "<group>";
+		};
+		8398323B1B039B2100A3C1DD /* HeartRateDevice */ = {
+			isa = PBXGroup;
+			children = (
+				839832531B039CF100A3C1DD /* HeartRateService.h */,
+				8398323C1B039B2100A3C1DD /* HeartRateDevice.h */,
+				8398323E1B039B2100A3C1DD /* HeartRateDevice.m */,
+			);
+			path = HeartRateDevice;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		839832381B039B2100A3C1DD /* HeartRateDevice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8398324D1B039B2100A3C1DD /* Build configuration list for PBXNativeTarget "HeartRateDevice" */;
+			buildPhases = (
+				839832351B039B2100A3C1DD /* Sources */,
+				839832361B039B2100A3C1DD /* Frameworks */,
+				839832371B039B2100A3C1DD /* CopyFiles */,
+				83EB3C161B3EBBAA00A21819 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeartRateDevice;
+			productName = HeartRateDevice;
+			productReference = 832840D91B57D9440038554E /* libHeartRateDevice.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		839832311B039B2100A3C1DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "张志阳";
+				TargetAttributes = {
+					839832381B039B2100A3C1DD = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 839832341B039B2100A3C1DD /* Build configuration list for PBXProject "HeartRateDevice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 839832301B039B2100A3C1DD;
+			productRefGroup = 839832301B039B2100A3C1DD;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				839832381B039B2100A3C1DD /* HeartRateDevice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83EB3C161B3EBBAA00A21819 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		839832351B039B2100A3C1DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8398323F1B039B2100A3C1DD /* HeartRateDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8398324B1B039B2100A3C1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		8398324C1B039B2100A3C1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+		8398324E1B039B2100A3C1DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Debug;
+		};
+		8398324F1B039B2100A3C1DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		839832341B039B2100A3C1DD /* Build configuration list for PBXProject "HeartRateDevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8398324B1B039B2100A3C1DD /* Debug */,
+				8398324C1B039B2100A3C1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8398324D1B039B2100A3C1DD /* Build configuration list for PBXNativeTarget "HeartRateDevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8398324E1B039B2100A3C1DD /* Debug */,
+				8398324F1B039B2100A3C1DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 839832311B039B2100A3C1DD /* Project object */;
+}

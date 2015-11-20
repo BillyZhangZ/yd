@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XJSMSLoginVerifyViewController">
+            <connections>
+                <outlet property="verifyButton" destination="vRx-44-aLW" id="Wqi-Gr-ZMA"/>
+                <outlet property="verifyTextFiled" destination="lEL-Zz-aY9" id="gKB-9G-Lvh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ZE-7e-lbf">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入验证码" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lEL-Zz-aY9">
+                    <rect key="frame" x="40" y="150" width="520" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="2Tt-YC-noW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="THM-ci-9e6"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-44-aLW">
+                    <rect key="frame" x="40" y="230" width="520" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="MdI-az-QEd"/>
+                    </constraints>
+                    <state key="normal" title="倒计时">
+                        <color key="titleColor" red="0.94117647058823528" green="0.396078431372549" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="verifyButtonClicked:" destination="-1" eventType="touchUpInside" id="6pg-N2-4nq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPf-Vf-RrQ">
+                    <rect key="frame" x="16" y="40" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Aj2-0Q-CSt"/>
+                        <constraint firstAttribute="width" constant="44" id="BCf-M3-vKT"/>
+                    </constraints>
+                    <state key="normal" image="back.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonClicked:" destination="-1" eventType="touchUpInside" id="UzH-9W-my0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已发送验证码到你的手机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYd-W1-Wco">
+                    <rect key="frame" x="40" y="121" width="187" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="WAK-P8-LuL"/>
+                        <constraint firstAttribute="width" constant="187" id="nD0-EY-FZZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="lEL-Zz-aY9" firstAttribute="leading" secondItem="zYd-W1-Wco" secondAttribute="leading" id="4As-FN-DW2"/>
+                <constraint firstItem="lEL-Zz-aY9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="84i-RM-8Ed"/>
+                <constraint firstItem="lEL-Zz-aY9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="150" id="EN6-z7-pBH"/>
+                <constraint firstItem="aPf-Vf-RrQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="IIl-qW-PDo"/>
+                <constraint firstItem="lEL-Zz-aY9" firstAttribute="top" secondItem="zYd-W1-Wco" secondAttribute="bottom" constant="8" id="JSD-2e-EyK"/>
+                <constraint firstItem="8ZE-7e-lbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NIA-Wz-2Sj"/>
+                <constraint firstAttribute="trailing" secondItem="vRx-44-aLW" secondAttribute="trailing" constant="40" id="Pcb-GI-FCh"/>
+                <constraint firstItem="vRx-44-aLW" firstAttribute="top" secondItem="lEL-Zz-aY9" secondAttribute="bottom" constant="40" id="Sgb-Un-Acj"/>
+                <constraint firstAttribute="trailing" secondItem="lEL-Zz-aY9" secondAttribute="trailing" constant="40" id="eBA-yv-igk"/>
+                <constraint firstItem="vRx-44-aLW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="lEo-PB-feV"/>
+                <constraint firstItem="8ZE-7e-lbf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mws-aX-itS"/>
+                <constraint firstAttribute="bottom" secondItem="8ZE-7e-lbf" secondAttribute="bottom" id="ppd-0a-r6g"/>
+                <constraint firstItem="aPf-Vf-RrQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="s6Y-1Z-eoF"/>
+                <constraint firstAttribute="trailing" secondItem="8ZE-7e-lbf" secondAttribute="trailing" id="xH1-7P-6AG"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="rgD-Ku-Kgi" appends="YES" id="cmj-ff-DTM"/>
+                <outletCollection property="gestureRecognizers" destination="ZeG-bm-jyA" appends="YES" id="3hs-ky-NNW"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="rgD-Ku-Kgi">
+            <connections>
+                <action selector="tapGestureOccured:" destination="-1" id="o8K-8i-asl"/>
+                <outlet property="delegate" destination="i5M-Pr-FkT" id="hl0-R7-hq5"/>
+            </connections>
+        </tapGestureRecognizer>
+        <swipeGestureRecognizer delaysTouchesBegan="YES" direction="right" id="ZeG-bm-jyA">
+            <connections>
+                <action selector="swipeGestureOcurred:" destination="-1" id="m4A-4O-p3I"/>
+                <outlet property="delegate" destination="i5M-Pr-FkT" id="xNM-aR-p3x"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="back.png" width="44" height="44"/>
+        <image name="history_bg.png" width="320" height="568"/>
+    </resources>
+</document>
